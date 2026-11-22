@@ -1,0 +1,38 @@
+{
+  "name": "gitsync",
+  "description": "Git проекта intraHouse: отправка и получение по кнопке",
+  "module": "index.js",
+  "single": 1,
+  "nochannels": 0,
+  "spawn": 0,
+
+  "channel_popup": {
+    "add": [
+      { "id": "channel_node_folder", "title": "Набор каналов Git" },
+      { "id": "channel", "title": "$NewChannel" }
+    ],
+    "copypaste": true,
+    "delete": true
+  },
+
+  "default_channel": { "r": 1, "w": 0, "chan": "status", "title": "Состояние" },
+
+  "default_channel_node_folder": {
+    "foldertype": "node",
+    "title": "Git проекта",
+    "channels": [
+      { "chan": "status",      "title": "Состояние",                    "r": 1, "w": 0 },
+      { "chan": "uncommitted", "title": "Правок в интерфейсе",          "r": 1, "w": 0 },
+      { "chan": "behind",      "title": "Утверждено, не развёрнуто",    "r": 1, "w": 0 },
+      { "chan": "ahead",       "title": "Не отправлено в репозиторий",  "r": 1, "w": 0 },
+      { "chan": "local",       "title": "Развёрнутый коммит",           "r": 1, "w": 0 },
+      { "chan": "remote",      "title": "Коммит в репозитории",         "r": 1, "w": 0 },
+      { "chan": "result",      "title": "Результат последнего действия","r": 1, "w": 0 },
+      { "chan": "busy",        "title": "Выполняется",                  "r": 1, "w": 0 },
+      { "chan": "refresh",     "title": "Обновить состояние",           "r": 1, "w": 1 },
+      { "chan": "sync",        "title": "Отправить в git",              "r": 1, "w": 1 },
+      { "chan": "deploy",      "title": "Получить из git и развернуть", "r": 1, "w": 1 },
+      { "chan": "rollback",    "title": "Откат к последнему снимку",    "r": 1, "w": 1 }
+    ]
+  }
+}
