@@ -1,0 +1,36 @@
+{
+  "grid": [
+    { "id": "p1", "xs": 6, "class": "main", "table": "units" },
+    { "id": "p2", "xs": 6, "class": "main", "table": "units" },
+    { "id": "p9", "xs": 12, "class": "main", "table": "unitsTreeTable", "height": "fill" }
+  ],
+  "spacing": 10,
+  "p1": [
+    { "prop": "id", "title": "ID", "type": "text" },
+    { "prop": "name", "title": "$Name", "type": "input" },
+    { "prop": "projectdir", "title": "Каталог проекта (git)", "type": "input", "default": "" },
+    { "prop": "branch", "title": "Ветка", "type": "input", "default": "main" },
+    { "prop": "remote", "title": "Remote", "type": "input", "default": "origin" },
+    { "prop": "sshkey", "title": "SSH-ключ (deploy key), путь", "type": "input", "default": "" }
+  ],
+  "p2": [
+    { "prop": "fetchmin", "title": "Проверять репозиторий раз в, мин (0 — только по кнопке)", "type": "number", "default": 15 },
+    { "prop": "runner", "title": "Запуск деплоя вне intraHouse", "type": "input", "default": "systemd-run --collect --unit=ih-gitsync-%ts" },
+    { "prop": "restarttime", "title": "$Unit_Restarttime", "type": "number", "default": 5 },
+    { "prop": "loglevel", "title": "$LogLevel", "type": "droplist", "data": "loglevelList" },
+    { "prop": "txt", "title": "$Comment", "type": "input" }
+  ],
+  "p9": [
+    {
+      "title": "", "type": "table", "prop": "unitsTreeTable",
+      "columns": [
+        { "prop": "name", "title": "$name", "type": "text", "width": 150 },
+        { "prop": "state", "title": "$state", "type": "text", "width": 150 },
+        { "prop": "laststart", "title": "$laststart", "type": "text", "width": 150 },
+        { "prop": "laststop", "title": "$laststop", "type": "text", "width": 150 },
+        { "prop": "uptime", "title": "$uptime", "type": "text", "width": 150 },
+        { "prop": "error", "title": "$error", "type": "text", "width": 250 }
+      ]
+    }
+  ]
+}
