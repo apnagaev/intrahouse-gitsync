@@ -69,9 +69,21 @@ live_file=./jbase/devparam.db
 preserve_live=0
 check_deploy_status() {
   changes=$(git status --porcelain --untracked-files=all)
-  [ -z "$changes" ] || {
-    [ "$preserve_live" -eq 1 ] && [ "$changes" = ' M jbase/devparam.db' ]
-  }
+  while IFS= read -r change; do
+    case "$change" in
+      '') ;;
+      ' M jbase/devparam.db') [ "$preserve_live" -eq 1 ] || return 1 ;;
+      ' M jbase/units.db')
+        if ! git diff --quiet "$head" "$target" -- jbase/units.db; then
+          echo 'units.db изменён и локально, и в целевом коммите' >&2
+          return 1
+        fi
+        ;;
+      *) printf 'Локальная правка блокирует deploy: %s\n' "$change" >&2; return 1 ;;
+    esac
+  done <<STATUS
+$changes
+STATUS
 }
 
 case "$op" in
