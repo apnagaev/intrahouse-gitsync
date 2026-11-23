@@ -15,7 +15,7 @@
   ],
   "p2": [
     { "prop": "fetchmin", "title": "Проверять репозиторий раз в, мин (0 — только по кнопке)", "type": "number", "default": 15 },
-    { "prop": "runner", "title": "Запуск деплоя вне intraHouse", "type": "input", "default": "systemd-run --collect --unit=ih-gitsync-%ts" },
+    { "prop": "runner", "title": "Запуск операций обслуживания вне intraHouse", "type": "input", "default": "systemd-run --collect --unit=ih-gitsync-%ts" },
     { "prop": "restarttime", "title": "$Unit_Restarttime", "type": "number", "default": 5 },
     { "prop": "loglevel", "title": "$LogLevel", "type": "droplist", "data": "loglevelList" },
     { "prop": "txt", "title": "$Comment", "type": "input" }
