@@ -1,0 +1,4 @@
+IH_STOP="systemctl stop intrahouse"
+IH_START="systemctl start intrahouse"
+IH_SNAPSHOTS=/var/backups/intrahouse
+IH_KEEP=20
