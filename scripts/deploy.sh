@@ -41,8 +41,8 @@ restart() {
   exit "$code"
 }
 trap restart EXIT
-sh -c "$IH_STOP"
 stopped=1
+sh -c "$IH_STOP"
 # Snapshot while databases are stopped; archive may include secrets, mode 0600.
 mkdir -p "$IH_SNAPSHOTS"
 chmod 700 "$IH_SNAPSHOTS"
@@ -51,4 +51,6 @@ snap="$IH_SNAPSHOTS/lav24-$(date +%Y%m%d-%H%M%S)-before-deploy.tar.gz"
 chmod 600 "$snap"
 # Revalidate before applying changes. No commit or push is performed.
 git merge --ff-only "$target"
+sh -c "$IH_START"
+stopped=0
 log "Обновлено до $(git rev-parse --short HEAD); снимок $(basename "$snap")"
