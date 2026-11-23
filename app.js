@@ -135,7 +135,22 @@ module.exports = async function (plugin) {
       }
       const blob = await git(['show', ':' + file]);
       if (blob.code) throw new Error('Не удалось проверить индекс: ' + file);
-      if (values.some(value => blob.out.includes(value))) throw new Error('В индексе обнаружен секрет: ' + file);
+      let strings;
+      if (file.endsWith('.db')) {
+        try {
+          strings = [];
+          const visit = x => {
+            if (typeof x === 'string') strings.push(x);
+            else if (Array.isArray(x)) x.forEach(visit);
+            else if (x && typeof x === 'object') Object.entries(x).forEach(([k, v]) => { strings.push(k); visit(v); });
+          };
+          blob.out.split('\\n').filter(Boolean).forEach(line => visit(JSON.parse(line)));
+        } catch (e) { throw new Error('Невозможно проверить NeDB в индексе: ' + file); }
+      } else {
+        strings = [blob.out];
+      }
+      if (values.some(value => strings.some(str => str.includes(value))))
+        throw new Error('В индексе обнаружен секрет: ' + file);
     }
   }
 
