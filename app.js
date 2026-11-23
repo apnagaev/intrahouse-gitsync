@@ -189,7 +189,8 @@ module.exports = async function (plugin) {
   async function launch(operation) {
     if (operation === 'deploy') {
       const status = await refresh(true);
-      if (status.ahead || status.files.some(file => file !== 'jbase/devparam.db')) throw new Error('Сперва отправьте или согласуйте локальные правки');
+      const allowed = ['jbase/devparam.db', 'jbase/units.db'];
+      if (status.ahead || status.files.some(file => !allowed.includes(file))) throw new Error('Сперва отправьте или согласуйте локальные правки');
       if (!status.behind) return result('Получать нечего: проект совпадает с Git');
     }
     const [command, ...args] = runner.replace('%ts', String(Date.now())).split(/\s+/);
