@@ -114,17 +114,44 @@ module.exports = async function (plugin) {
   }
 
   // ------------------------------------------------------------ действия
+  // Check exact staged blobs: clean filters can change bytes between disk and Git.
+  async function checkStagedSecrets() {
+    const envFile = path.join(dir, '.env');
+    if (!fs.existsSync(envFile)) throw new Error('Нет .env: отправка заблокирована');
+    const values = fs.readFileSync(envFile, 'utf8').split(/\r?\n/)
+      .filter(line => line && !/^\s*#/.test(line) && line.includes('='))
+      .map(line => line.slice(line.indexOf('=') + 1))
+      .filter(value => value.length >= 4);
+    const names = await git(['diff', '--cached', '--name-only', '--diff-filter=ACMR', '-z']);
+    if (names.code) throw new Error('Не удалось получить индекс Git');
+    const staged = names.out.split('\0').filter(Boolean);
+    for (const file of staged) {
+      if (file === '.env' || file.startsWith('private/')) throw new Error('Запрещённый файл в индексе: ' + file);
+      if (['jbase/globals.db', 'jbase/units.db', 'project.json'].includes(file)) {
+        const attr = await git(['check-attr', 'filter', '--', file]);
+        if (attr.code || !attr.out.endsWith(': ihsecrets')) throw new Error('Не настроен фильтр ihsecrets: ' + file);
+        const required = await git(['config', '--get', 'filter.ihsecrets.required']);
+        if (required.code || required.out !== 'true') throw new Error('Фильтр ihsecrets не является обязательным');
+      }
+      const blob = await git(['show', ':' + file]);
+      if (blob.code) throw new Error('Не удалось проверить индекс: ' + file);
+      if (values.some(value => blob.out.includes(value))) throw new Error('В индексе обнаружен секрет: ' + file);
+    }
+  }
+
   async function doSync() {
     const { files } = await refresh(true);
     if (!files.length) return result('Отправлять нечего: правок из интерфейса нет');
     const broken = brokenDb(files);
     if (broken) return result('Файл записывается прямо сейчас (' + broken + '), повторите через минуту', 1);
 
-    const chk = await run('python3', ['tools/ihsecrets.py', 'check']);
-    if (chk.code) return result('Остановлено, в git ушёл бы секрет: ' + (chk.out.split('\n').filter(l => l.startsWith('УТЕЧКА')).map(l => l.replace('УТЕЧКА: ', '')).join('; ') || lastLine(chk.out)), 0);
-
     let r = await git(['add', '-A']);
     if (r.code) return result('git add: ' + firstLine(r.err), 0);
+    // Validate after git add and before creating any commit.
+    const chk = await run('python3', ['tools/ihsecrets.py', 'check']);
+    if (chk.code) return result('Отправка заблокирована: проверка секретов не прошла (' + firstLine(chk.err || chk.out) + ')', 0);
+    try { await checkStagedSecrets(); }
+    catch (e) { return result('Отправка заблокирована: ' + e.message, 0); }
     const msg = 'Правки из интерфейса intraHouse ' + stamp();
     r = await git(['commit', '-q', '-m', msg]);
     if (r.code) return result('Коммит не создан: ' + firstLine(r.err || r.out), 0);
@@ -132,8 +159,12 @@ module.exports = async function (plugin) {
     r = await git(['push', '-q', remote, 'HEAD:' + branch]);
     if (!r.code) return result('Отправлено в ' + branch + ': ' + files.length + ' файл(ов)');
 
-    // В репозитории main ушёл вперёд (смёржили PR) — не трогаем рабочие файлы, отправляем в отдельную ветку
-    const side = 'ui/' + stamp().replace(/[^0-9]/g, '').slice(0, 12);
+    // Distinguish non-fast-forward from network, auth and other push errors.
+    const fetched = await git(['fetch', '-q', remote, branch]);
+    if (fetched.code) return result('Push не удался; fetch тоже не удался: ' + firstLine(fetched.err || r.err), 0);
+    const ancestor = await git(['merge-base', '--is-ancestor', remote + '/' + branch, 'HEAD']);
+    if (ancestor.code !== 1) return result('Push не удался (не конфликт версий): ' + firstLine(r.err), 0);
+    const side = 'ui/' + new Date().toISOString().replace(/[^0-9]/g, '').slice(0, 14);
     const r2 = await git(['push', '-q', remote, 'HEAD:refs/heads/' + side]);
     if (r2.code) return result('Не отправлено: ' + firstLine(r.err), 0);
     result('В репозитории есть новые изменения. Правки отправлены в ветку ' + side +
