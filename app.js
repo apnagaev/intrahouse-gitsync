@@ -144,7 +144,7 @@ module.exports = async function (plugin) {
             else if (Array.isArray(x)) x.forEach(visit);
             else if (x && typeof x === 'object') Object.entries(x).forEach(([k, v]) => { strings.push(k); visit(v); });
           };
-          blob.out.split('\\n').filter(Boolean).forEach(line => visit(JSON.parse(line)));
+          blob.out.split('\n').filter(Boolean).forEach(line => visit(JSON.parse(line)));
         } catch (e) { throw new Error('Невозможно проверить NeDB в индексе: ' + file); }
       } else {
         strings = [blob.out];
