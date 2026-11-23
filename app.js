@@ -1,5 +1,6 @@
 const { execFile, spawn } = require('child_process');
 const fs = require('fs');
+const { version } = require('./package.json');
 const path = require('path');
 
 const COMMANDS = ['refresh', 'sync', 'deploy', 'rollback', 'backup'];
@@ -56,7 +57,7 @@ module.exports = async function (plugin) {
   function run(cmd, args, opts) {
     return new Promise(resolve => {
       execFile(cmd, args, Object.assign({ cwd: dir, env, timeout: 120000, maxBuffer: 16 * 1024 * 1024 }, opts),
-        (err, stdout, stderr) => resolve({ code: err ? (err.code || 1) : 0, out: String(stdout).trim(), err: String(stderr).trim() }));
+        (err, stdout, stderr) => resolve({ code: err ? (err.code || 1) : 0, out: String(stdout).trim(), rawOut: String(stdout), err: String(stderr).trim() }));
     });
   }
   const git = args => run('git', args);
@@ -84,7 +85,7 @@ module.exports = async function (plugin) {
   async function changedFiles() {
     const r = await git(['status', '--porcelain', '-z', '--no-renames']);
     if (r.code) throw new Error('git status: ' + r.err);
-    return r.out.split('\0').filter(Boolean).map(s => s.slice(3));
+    return r.rawOut.split('\0').filter(Boolean).map(s => s.slice(3));
   }
 
   async function refresh(doFetch) {
@@ -277,7 +278,7 @@ module.exports = async function (plugin) {
   resultTimer = setInterval(() => { try { publishOperation(); } catch (e) { plugin.log(e.message, 1); } }, 2000);
   try { await refresh(fetchMin > 0); } catch (e) { result(e.message, 1); await refresh(false); }
   if (fetchMin > 0) timer = setInterval(() => { if (!busy) refresh(true).catch(() => {}); }, fetchMin * 60000);
-  plugin.log('gitsync: ' + dir + ', ветка ' + branch + (fetchMin ? ', проверка раз в ' + fetchMin + ' мин' : ''), 1);
+  plugin.log('gitsync ' + version + ': ' + dir + ', ветка ' + branch + (fetchMin ? ', проверка раз в ' + fetchMin + ' мин' : ''), 1);
 };
 
 function stamp() {
