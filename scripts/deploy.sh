@@ -2,7 +2,7 @@
 # GitSync safe deploy: project-specific settings remain in tools/ih.conf.
 # No automatic commit, push, reset, clean or destructive rollback.
 set -eu
-[ "$#" -eq 3 ] || { echo "usage: deploy.sh PROJECT REMOTE BRANCH" >&2; exit 2; }
+{ [ "$#" -eq 3 ] || { [ "$#" -eq 4 ] && [ "$4" = "--check" ]; }; } || { echo "usage: deploy.sh PROJECT REMOTE BRANCH [--check]" >&2; exit 2; }
 PROJECT=$1 REMOTE=$2 BRANCH=$3
 cd "$PROJECT"
 . tools/ih.conf
@@ -29,6 +29,7 @@ if comm -12 "$incoming" "$localfiles" | grep -q .; then
 fi
 # Check project policy before touching the running system.
 python3 tools/ihsecrets.py check >/dev/null || { log "Проверка секретов не прошла"; exit 1; }
+if [ "${4:-}" = "--check" ]; then log "Предпроверка Deploy пройдена: обновление доступно"; exit 0; fi
 stopped=0
 restart() {
   code=$?
