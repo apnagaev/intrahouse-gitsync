@@ -49,10 +49,14 @@ prefix="$(basename "$PWD")-gitsync-"
 head=$(git rev-parse HEAD)
 [ "$(git symbolic-ref --short HEAD)" = "$branch" ]
 
+project_tar() {
+  tar --exclude=./.git --exclude=./hist --exclude=./logdb --exclude=./operative "$@"
+}
+
 snapshot() {
   file=$(mktemp "$backup/.$prefix.XXXXXXXX")
   final="$backup/$prefix$(date -u '+%Y%m%d%H%M%S')-${file##*.}-$1.tar.gz"
-  if ! tar --exclude=./.git -czf "$file" .; then
+  if ! project_tar -czf "$file" .; then
     rm -f -- "$file"
     return 1
   fi
@@ -61,8 +65,8 @@ snapshot() {
 }
 
 restore() {
-  find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf -- {} + &&
-    tar -xzf "$1"
+  find . -mindepth 1 -maxdepth 1 ! -name .git ! -name hist ! -name logdb ! -name operative -exec rm -rf -- {} + &&
+    project_tar -xzf "$1"
 }
 
 live_file=./jbase/devparam.db
