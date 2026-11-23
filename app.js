@@ -6,8 +6,8 @@
  *   команды: refresh, sync, deploy, rollback  — запись 1 (кнопка) запускает действие
  *
  * sync     — коммит правок из интерфейса (секреты срезает git-фильтр ihsecrets) и push.
- * deploy   — запускает tools/ih-deploy.sh ОТДЕЛЬНОЙ службой (systemd-run): скрипт останавливает
- *            intraHouse вместе с этим плагином, делает снимок, git pull, запускает intraHouse.
+ * deploy   — запускает scripts/deploy.sh из GitSync ОТДЕЛЬНОЙ службой (systemd-run): скрипт останавливает
+ *            intraHouse вместе с этим плагином, делает снимок после остановки, fast-forward и запускает intraHouse.
  * rollback — так же запускает tools/ih-rollback.sh --latest.
  * Результат деплоя/отката скрипты пишут в .git/ih-last-op — плагин показывает его после перезапуска.
  */
@@ -176,7 +176,7 @@ module.exports = async function (plugin) {
     if (what === 'deploy' && !st.behind && !st.files.length) return result('Получать нечего: репозиторий и проект совпадают');
     const unit = runner.replace('%ts', String(Date.now()));
     const parts = unit.split(/\s+/).filter(Boolean);
-    const cmd = parts.concat([path.join(dir, 'tools', script)], args);
+    const cmd = what === 'deploy'\n      ? parts.concat(['sh', path.join(__dirname, 'scripts', 'deploy.sh'), dir, remote, branch])\n      : parts.concat([path.join(dir, 'tools', script)], args);
     result((what === 'deploy' ? 'Развёртывание запущено' : 'Откат запущен') + ': intraHouse будет перезапущен', 1);
     const child = spawn(cmd[0], cmd.slice(1), { cwd: dir, env, detached: true, stdio: 'ignore' });
     child.on('error', e => result('Не удалось запустить ' + script + ': ' + e.message, 0));
