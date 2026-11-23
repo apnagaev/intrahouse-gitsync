@@ -65,6 +65,15 @@ restore() {
     tar -xzf "$1"
 }
 
+live_file=./jbase/devparam.db
+preserve_live=0
+check_deploy_status() {
+  changes=$(git status --porcelain --untracked-files=all)
+  [ -z "$changes" ] || {
+    [ "$preserve_live" -eq 1 ] && [ "$changes" = ' M jbase/devparam.db' ]
+  }
+}
+
 case "$op" in
   deploy)
     git fetch -- "$remote" "$branch"
@@ -77,7 +86,10 @@ case "$op" in
       [ "$(git check-attr filter -- "$file")" = "$file: filter: ihsecrets" ]
     done
     git merge-base --is-ancestor "$head" "$target"
-    [ -z "$(git status --porcelain)" ]
+    if git cat-file -e "$head:jbase/devparam.db" && ! git cat-file -e "$target:jbase/devparam.db" 2>/dev/null; then
+      preserve_live=1
+    fi
+    check_deploy_status
     # Validate the exact incoming secret-bearing files before stopping the service.
     for file in jbase/globals.db jbase/units.db project.json; do
       git show "$target:$file" | python3 "$ops/ihsecrets.py" validate "$file"
@@ -103,10 +115,17 @@ stopped=1
 sh -c "$IH_STOP"
 case "$op" in
   deploy)
-    [ -z "$(git status --porcelain)" ]
+    check_deploy_status
     snap=$(snapshot before-deploy)
     recovery=$snap
+    if [ "$preserve_live" -eq 1 ]; then
+      git restore -- "$live_file"
+    fi
     git merge --ff-only "$target"
+    if [ "$preserve_live" -eq 1 ]; then
+      git check-ignore -q -- "$live_file"
+      tar -xzf "$snap" -- "$live_file"
+    fi
     python3 "$ops/ihsecrets.py" check
     ;;
   rollback)
