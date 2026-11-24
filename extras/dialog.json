@@ -1,0 +1,3458 @@
+{
+  "settings": {
+    "x": {
+      "value": 445
+    },
+    "y": {
+      "value": -39
+    },
+    "w": {
+      "value": 780
+    },
+    "h": {
+      "value": 1178
+    },
+    "scale": {
+      "value": 0.72
+    },
+    "grid": {
+      "value": 5
+    },
+    "backgroundColor": {
+      "type": "fill",
+      "value": "var(--lav24-paper,#fffdf9)",
+      "fill": "var(--lav24-paper,#fffdf9)",
+      "angle": 180,
+      "shape": "circle",
+      "positionX": 50,
+      "positionY": 50,
+      "extent": "closest-side",
+      "palette": [
+        {
+          "offset": "0.000",
+          "color": "#9b9b9b",
+          "opacity": 0.42,
+          "id": 1
+        },
+        {
+          "offset": "1.000",
+          "color": "#e7e7e7",
+          "opacity": 1,
+          "id": 2
+        }
+      ]
+    },
+    "backgroundImage": {
+      "value": "unset"
+    },
+    "overlayColor": {
+      "type": "fill",
+      "value": "rgba(0,0,0,0)",
+      "fill": "rgba(0,0,0,0)",
+      "angle": 90,
+      "shape": "circle",
+      "positionX": 50,
+      "positionY": 50,
+      "extent": "closest-side",
+      "palette": [
+        {
+          "offset": "0.000",
+          "color": "#4a90e2",
+          "opacity": 0.2,
+          "id": 1
+        },
+        {
+          "offset": "1.000",
+          "color": "#9013fe",
+          "opacity": 0.16,
+          "id": 2
+        }
+      ]
+    },
+    "fitW": {
+      "value": true
+    },
+    "fitH": {
+      "value": true
+    },
+    "alignW": {
+      "value": {
+        "id": "center",
+        "title": "Center"
+      }
+    },
+    "alignH": {
+      "value": {
+        "id": "center",
+        "title": "Center"
+      }
+    },
+    "position": {
+      "value": {
+        "id": "center",
+        "title": "Center"
+      }
+    },
+    "outsideClose": {
+      "value": 1
+    }
+  },
+  "list": [
+    "text_git_title",
+    "button_close",
+    "label_status",
+    "value_status",
+    "label_uncommitted",
+    "value_uncommitted",
+    "label_behind",
+    "value_behind",
+    "label_ahead",
+    "value_ahead",
+    "label_busy",
+    "value_busy",
+    "label_result",
+    "value_result",
+    "button_refresh",
+    "button_sync",
+    "button_deploy",
+    "button_rollback",
+    "button_backup",
+    "text_hint",
+    "git_status_surface",
+    "git_result_surface",
+    "lav24_system_palette"
+  ],
+  "elements": {
+    "text_git_title": {
+      "text": {
+        "value": "Git проекта"
+      },
+      "textSize": {
+        "value": 60
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "text_git_title",
+      "x": {
+        "value": 40
+      },
+      "y": {
+        "value": 23
+      },
+      "w": {
+        "value": 599
+      },
+      "h": {
+        "value": 89
+      },
+      "w2": {
+        "value": 599
+      },
+      "h2": {
+        "value": 89
+      }
+    },
+    "button_close": {
+      "text": {
+        "value": ""
+      },
+      "textSize": {
+        "value": 28
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-buttonInk,#233c51)"
+      },
+      "img": {
+        "value": "symbol3210.svg",
+        "folder": "img033"
+      },
+      "imgColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "imgSize": {
+        "value": -50
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-paper,#fffdf9)",
+        "fill": "var(--lav24-paper,#fffdf9)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {},
+            "title": "close",
+            "command": "close"
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 682
+      },
+      "y": {
+        "value": 12
+      },
+      "w": {
+        "value": 84
+      },
+      "h": {
+        "value": 84
+      },
+      "w2": {
+        "value": 84
+      },
+      "h2": {
+        "value": 84
+      },
+      "_label": "button_close"
+    },
+    "label_status": {
+      "text": {
+        "value": "Состояние"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "label_status",
+      "x": {
+        "value": 47
+      },
+      "y": {
+        "value": 131
+      },
+      "w": {
+        "value": 281
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 281
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "value_status": {
+      "text": {
+        "value": "—",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "list": [
+          "local_dev_id_dev_id"
+        ],
+        "binds": {
+          "local_dev_id_dev_id": {
+            "var": "inData",
+            "title": "locals.dev_id",
+            "did": "local_dev_id",
+            "prop": "dev_id"
+          }
+        },
+        "title": "locals.dev_id",
+        "func": "return String(getValue(inData, 'status') ?? '—');",
+        "text": "—"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-end",
+          "lang": "right",
+          "title": "Справа"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "value_status",
+      "x": {
+        "value": 327
+      },
+      "y": {
+        "value": 131
+      },
+      "w": {
+        "value": 397
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 397
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "label_uncommitted": {
+      "text": {
+        "value": "Правки"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "label_uncommitted",
+      "x": {
+        "value": 47
+      },
+      "y": {
+        "value": 194
+      },
+      "w": {
+        "value": 281
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 281
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "value_uncommitted": {
+      "text": {
+        "value": "—",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "list": [
+          "local_dev_id_dev_id"
+        ],
+        "binds": {
+          "local_dev_id_dev_id": {
+            "var": "inData",
+            "title": "locals.dev_id",
+            "did": "local_dev_id",
+            "prop": "dev_id"
+          }
+        },
+        "title": "locals.dev_id",
+        "func": "return String(getValue(inData, 'uncommitted') ?? '—');",
+        "text": "—"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-end",
+          "lang": "right",
+          "title": "Справа"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "value_uncommitted",
+      "x": {
+        "value": 327
+      },
+      "y": {
+        "value": 194
+      },
+      "w": {
+        "value": 397
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 397
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "label_behind": {
+      "text": {
+        "value": "Получить"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "label_behind",
+      "x": {
+        "value": 47
+      },
+      "y": {
+        "value": 257
+      },
+      "w": {
+        "value": 281
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 281
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "value_behind": {
+      "text": {
+        "value": "—",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "list": [
+          "local_dev_id_dev_id"
+        ],
+        "binds": {
+          "local_dev_id_dev_id": {
+            "var": "inData",
+            "title": "locals.dev_id",
+            "did": "local_dev_id",
+            "prop": "dev_id"
+          }
+        },
+        "title": "locals.dev_id",
+        "func": "return String(getValue(inData, 'behind') ?? '—');",
+        "text": "—"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-end",
+          "lang": "right",
+          "title": "Справа"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "value_behind",
+      "x": {
+        "value": 327
+      },
+      "y": {
+        "value": 257
+      },
+      "w": {
+        "value": 397
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 397
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "label_ahead": {
+      "text": {
+        "value": "Отправить"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "label_ahead",
+      "x": {
+        "value": 47
+      },
+      "y": {
+        "value": 319
+      },
+      "w": {
+        "value": 281
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 281
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "value_ahead": {
+      "text": {
+        "value": "—",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "list": [
+          "local_dev_id_dev_id"
+        ],
+        "binds": {
+          "local_dev_id_dev_id": {
+            "var": "inData",
+            "title": "locals.dev_id",
+            "did": "local_dev_id",
+            "prop": "dev_id"
+          }
+        },
+        "title": "locals.dev_id",
+        "func": "return String(getValue(inData, 'ahead') ?? '—');",
+        "text": "—"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-end",
+          "lang": "right",
+          "title": "Справа"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "value_ahead",
+      "x": {
+        "value": 327
+      },
+      "y": {
+        "value": 319
+      },
+      "w": {
+        "value": 397
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 397
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "label_busy": {
+      "text": {
+        "value": "Занят"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "label_busy",
+      "x": {
+        "value": 47
+      },
+      "y": {
+        "value": 382
+      },
+      "w": {
+        "value": 281
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 281
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "value_busy": {
+      "text": {
+        "value": "—",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "list": [
+          "local_dev_id_dev_id"
+        ],
+        "binds": {
+          "local_dev_id_dev_id": {
+            "var": "inData",
+            "title": "locals.dev_id",
+            "did": "local_dev_id",
+            "prop": "dev_id"
+          }
+        },
+        "title": "locals.dev_id",
+        "func": "return String(getValue(inData, 'busy') ?? '—');",
+        "text": "—"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-end",
+          "lang": "right",
+          "title": "Справа"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "value_busy",
+      "x": {
+        "value": 327
+      },
+      "y": {
+        "value": 382
+      },
+      "w": {
+        "value": 397
+      },
+      "h": {
+        "value": 59
+      },
+      "w2": {
+        "value": 397
+      },
+      "h2": {
+        "value": 59
+      }
+    },
+    "label_result": {
+      "text": {
+        "value": "Результат последней операции"
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "label_result",
+      "x": {
+        "value": 47
+      },
+      "y": {
+        "value": 479
+      },
+      "w": {
+        "value": 668
+      },
+      "h": {
+        "value": 55
+      },
+      "w2": {
+        "value": 668
+      },
+      "h2": {
+        "value": 55
+      }
+    },
+    "value_result": {
+      "text": {
+        "value": "—",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "list": [
+          "local_dev_id_dev_id"
+        ],
+        "binds": {
+          "local_dev_id_dev_id": {
+            "var": "inData",
+            "title": "locals.dev_id",
+            "did": "local_dev_id",
+            "prop": "dev_id"
+          }
+        },
+        "title": "locals.dev_id",
+        "func": "return String(getValue(inData, 'result') ?? '—');",
+        "text": "—"
+      },
+      "textSize": {
+        "value": 30
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "value_result",
+      "x": {
+        "value": 47
+      },
+      "y": {
+        "value": 536
+      },
+      "w": {
+        "value": 671
+      },
+      "h": {
+        "value": 144
+      },
+      "w2": {
+        "value": 671
+      },
+      "h2": {
+        "value": 144
+      }
+    },
+    "button_refresh": {
+      "text": {
+        "value": "Обновить"
+      },
+      "textSize": {
+        "value": 38
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-buttonInk,#233c51)"
+      },
+      "img": {
+        "value": ""
+      },
+      "imgColor": {
+        "value": "transparent"
+      },
+      "imgSize": {
+        "value": 0
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "imgPosition": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "imgRatio": {
+        "value": 30
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-button,#e6eef3)",
+        "fill": "var(--lav24-button,#e6eef3)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100,
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'state')==1 ? 30 : 100;",
+        "number": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {},
+            "did": "__DEVICE_ID__",
+            "prop": "refresh",
+            "title": "GitSync.refresh",
+            "func": "return 1;",
+            "local": 0,
+            "command": "setval_any"
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 25
+      },
+      "y": {
+        "value": 720
+      },
+      "w": {
+        "value": 352
+      },
+      "h": {
+        "value": 103
+      },
+      "w2": {
+        "value": 352
+      },
+      "h2": {
+        "value": 103
+      },
+      "_label": "button_refresh",
+      "disabled": {
+        "value": 0
+      }
+    },
+    "button_sync": {
+      "text": {
+        "value": "Отправить"
+      },
+      "textSize": {
+        "value": 38
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-buttonInk,#233c51)"
+      },
+      "img": {
+        "value": ""
+      },
+      "imgColor": {
+        "value": "transparent"
+      },
+      "imgSize": {
+        "value": 0
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "imgPosition": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "imgRatio": {
+        "value": 30
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-button,#e6eef3)",
+        "fill": "var(--lav24-button,#e6eef3)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100,
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'state')==1 ? 30 : 100;",
+        "number": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {},
+            "did": "__DEVICE_ID__",
+            "prop": "sync",
+            "title": "GitSync.sync",
+            "func": "return 1;",
+            "local": 0,
+            "command": "setval_any"
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 403
+      },
+      "y": {
+        "value": 720
+      },
+      "w": {
+        "value": 352
+      },
+      "h": {
+        "value": 103
+      },
+      "w2": {
+        "value": 352
+      },
+      "h2": {
+        "value": 103
+      },
+      "_label": "button_sync",
+      "disabled": {
+        "value": 0
+      }
+    },
+    "button_deploy": {
+      "text": {
+        "value": "Deploy"
+      },
+      "textSize": {
+        "value": 38
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-dangerInk,#fff8f2)"
+      },
+      "img": {
+        "value": ""
+      },
+      "imgColor": {
+        "value": "transparent"
+      },
+      "imgSize": {
+        "value": 0
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "imgPosition": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "imgRatio": {
+        "value": 30
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-danger,#8b3d39)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-danger,#8b3d39)",
+        "fill": "var(--lav24-danger,#8b3d39)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100,
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'state')==1 ? 30 : 100;",
+        "number": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {},
+            "did": "__DEVICE_ID__",
+            "prop": "deploy",
+            "title": "GitSync.deploy",
+            "func": "return 1;",
+            "local": 0,
+            "command": "setval_any"
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 25
+      },
+      "y": {
+        "value": 971
+      },
+      "w": {
+        "value": 352
+      },
+      "h": {
+        "value": 103
+      },
+      "w2": {
+        "value": 352
+      },
+      "h2": {
+        "value": 103
+      },
+      "_label": "button_deploy",
+      "disabled": {
+        "value": 0
+      }
+    },
+    "button_rollback": {
+      "text": {
+        "value": "Откат"
+      },
+      "textSize": {
+        "value": 38
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-dangerInk,#fff8f2)"
+      },
+      "img": {
+        "value": ""
+      },
+      "imgColor": {
+        "value": "transparent"
+      },
+      "imgSize": {
+        "value": 0
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "imgPosition": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "imgRatio": {
+        "value": 30
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-danger,#8b3d39)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-danger,#8b3d39)",
+        "fill": "var(--lav24-danger,#8b3d39)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100,
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'state')==1 ? 30 : 100;",
+        "number": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {},
+            "did": "__DEVICE_ID__",
+            "prop": "rollback",
+            "title": "GitSync.rollback",
+            "func": "return 1;",
+            "local": 0,
+            "command": "setval_any"
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 403
+      },
+      "y": {
+        "value": 971
+      },
+      "w": {
+        "value": 352
+      },
+      "h": {
+        "value": 103
+      },
+      "w2": {
+        "value": 352
+      },
+      "h2": {
+        "value": 103
+      },
+      "_label": "button_rollback",
+      "disabled": {
+        "value": 0
+      }
+    },
+    "text_hint": {
+      "text": {
+        "value": "Для резервной копии, Deploy и отката удерживайте кнопку."
+      },
+      "textSize": {
+        "value": 30
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "text_hint",
+      "x": {
+        "value": 29
+      },
+      "y": {
+        "value": 1093
+      },
+      "w": {
+        "value": 722
+      },
+      "h": {
+        "value": 68
+      },
+      "w2": {
+        "value": 722
+      },
+      "h2": {
+        "value": 68
+      }
+    },
+    "button_backup": {
+      "text": {
+        "value": "Удержать: Резервная копия"
+      },
+      "textSize": {
+        "value": 38
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-buttonInk,#233c51)"
+      },
+      "img": {
+        "value": ""
+      },
+      "imgColor": {
+        "value": "transparent"
+      },
+      "imgSize": {
+        "value": 0
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "imgPosition": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "imgRatio": {
+        "value": 30
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-button,#e6eef3)",
+        "fill": "var(--lav24-button,#e6eef3)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100,
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'state')==1 ? 30 : 100;",
+        "number": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {},
+            "did": "__DEVICE_ID__",
+            "prop": "backup",
+            "title": "GitSync.backup",
+            "func": "return 1;",
+            "local": 0,
+            "command": "setval_any"
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 25
+      },
+      "y": {
+        "value": 846
+      },
+      "w": {
+        "value": 729
+      },
+      "h": {
+        "value": 103
+      },
+      "w2": {
+        "value": 729
+      },
+      "h2": {
+        "value": 103
+      },
+      "_label": "button_backup",
+      "disabled": {
+        "value": 0
+      }
+    },
+    "git_status_surface": {
+      "text": {
+        "value": ""
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 14
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-field,#f1ede6)",
+        "fill": "var(--lav24-field,#f1ede6)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 1
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "git_status_surface",
+      "x": {
+        "value": 25
+      },
+      "y": {
+        "value": 124
+      },
+      "w": {
+        "value": 729
+      },
+      "h": {
+        "value": 331
+      },
+      "w2": {
+        "value": 729
+      },
+      "h2": {
+        "value": 331
+      }
+    },
+    "git_result_surface": {
+      "text": {
+        "value": ""
+      },
+      "textSize": {
+        "value": 36
+      },
+      "lineHeight": {
+        "value": 100
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-muted,#536277)"
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 14
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-field,#f1ede6)",
+        "fill": "var(--lav24-field,#f1ede6)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 1
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "_label": "git_result_surface",
+      "x": {
+        "value": 25
+      },
+      "y": {
+        "value": 471
+      },
+      "w": {
+        "value": 729
+      },
+      "h": {
+        "value": 222
+      },
+      "w2": {
+        "value": 729
+      },
+      "h2": {
+        "value": 222
+      }
+    },
+    "lav24_system_palette": {
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,0,0,0)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": -1
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "code": {
+        "value": "<script type=\"text/javascript\">\n(() => {\n  const styleId = 'lav24-system-palette';\n  if (document.getElementById(styleId)) return;\n\n  const stylesheet = document.createElement('style');\n  stylesheet.id = styleId;\n  stylesheet.textContent = \":root{--lav24-bg:#f5efe6;--lav24-paper:#fffdf9;--lav24-ink:#28354a;--lav24-muted:#536277;--lav24-hero:#28354a;--lav24-cream:#fff6e9;--lav24-active:#efc596;--lav24-edge:#e3d8c8;--lav24-field:#f1ede6;--lav24-button:#e6eef3;--lav24-buttonInk:#233c51;--lav24-danger:#8b3d39;--lav24-dangerInk:#fff8f2;--lav24-instrument:#fffdf9;--lav24-info:#275e94}@media (prefers-color-scheme: dark){:root{--lav24-bg:#151b24;--lav24-paper:#242e3d;--lav24-ink:#f4eee6;--lav24-muted:#c2cedc;--lav24-hero:#222d3e;--lav24-cream:#fff4e5;--lav24-active:#73491f;--lav24-edge:#415065;--lav24-field:#303d50;--lav24-button:#364a63;--lav24-buttonInk:#f2f6fb;--lav24-danger:#7f3942;--lav24-dangerInk:#fff2ee;--lav24-instrument:#e9e0d4;--lav24-info:#9cc9ff}}\";\n  document.head.appendChild(stylesheet);\n})();\n</script>\n<script type=\"text/javascript\">\n(() => {\n  const id = 'lav24-native-dialog-fit';\n  if (document.getElementById(id)) return;\n\n  const style = document.createElement('style');\n  style.id = id;\n  style.textContent = '.ihdialog > .dialog[data-lav24-fit]{flex:none;zoom:var(--lav24-dialog-scale)}'\n    + '.ihdialog > .dialog [style*=\"--lav24-dialog-journal\"],.ihdialog > .dialog [style*=\"--lav24-dialog-journal\"] *{overscroll-behavior:contain}';\n  document.head.appendChild(style);\n\n  let frame = 0;\n  function fitDialogs() {\n    frame = 0;\n    const viewport = document.documentElement;\n    for (const dialog of document.querySelectorAll('.ihdialog > .dialog:has(> [style*=\"--lav24-paper\"])')) {\n      const width = parseFloat(dialog.style.width);\n      const height = parseFloat(dialog.style.height);\n      if (!(width > 0 && height > 0 && viewport.clientWidth > 24 && viewport.clientHeight > 24)) continue;\n      const scale = Math.min(1, (viewport.clientWidth - 24) / width, (viewport.clientHeight - 24) / height);\n      if (scale < 1) {\n        dialog.style.setProperty('--lav24-dialog-scale', String(scale));\n        dialog.setAttribute('data-lav24-fit', '');\n      } else {\n        dialog.style.removeProperty('--lav24-dialog-scale');\n        dialog.removeAttribute('data-lav24-fit');\n      }\n    }\n  }\n\n  function schedule() {\n    if (!frame) frame = requestAnimationFrame(fitDialogs);\n  }\n\n  new MutationObserver(schedule).observe(document.body, {childList: true, subtree: true});\n  window.addEventListener('resize', schedule, {passive: true});\n  schedule();\n})();\n</script>",
+        "active": true
+      },
+      "type": "html",
+      "_label": "lav24_system_palette",
+      "x": {
+        "value": 0
+      },
+      "y": {
+        "value": 0
+      },
+      "w": {
+        "value": 1
+      },
+      "h": {
+        "value": 1
+      },
+      "w2": {
+        "value": 1
+      },
+      "h2": {
+        "value": 1
+      },
+      "block_exec": {
+        "value": 0
+      }
+    }
+  }
+}
