@@ -21,18 +21,19 @@
     "foldertype": "node",
     "title": "Git проекта",
     "channels": [
-      { "chan": "status",      "title": "Состояние",                    "r": 1, "w": 0 },
-      { "chan": "uncommitted", "title": "Правок в интерфейсе",          "r": 1, "w": 0 },
-      { "chan": "behind",      "title": "Утверждено, не развёрнуто",    "r": 1, "w": 0 },
-      { "chan": "ahead",       "title": "Не отправлено в репозиторий",  "r": 1, "w": 0 },
-      { "chan": "local",       "title": "Развёрнутый коммит",           "r": 1, "w": 0 },
-      { "chan": "remote",      "title": "Коммит в репозитории",         "r": 1, "w": 0 },
-      { "chan": "result",      "title": "Результат последнего действия","r": 1, "w": 0 },
-      { "chan": "busy",        "title": "Выполняется",                  "r": 1, "w": 0 },
-      { "chan": "refresh",     "title": "Обновить состояние",           "r": 1, "w": 1 },
-      { "chan": "sync",        "title": "Отправить в git",              "r": 1, "w": 1 },
-      { "chan": "deploy",      "title": "Получить из git и развернуть", "r": 1, "w": 1 },
-      { "chan": "rollback",    "title": "Откат к последнему снимку",    "r": 1, "w": 1 }
+      { "chan": "status", "devpropname": "status",      "title": "Состояние",                    "r": 1, "w": 0 },
+      { "chan": "uncommitted", "devpropname": "uncommitted", "title": "Правок в интерфейсе",          "r": 1, "w": 0 },
+      { "chan": "behind", "devpropname": "behind",      "title": "Утверждено, не развёрнуто",    "r": 1, "w": 0 },
+      { "chan": "ahead", "devpropname": "ahead",       "title": "Не отправлено в репозиторий",  "r": 1, "w": 0 },
+      { "chan": "local", "devpropname": "local",       "title": "Развёрнутый коммит",           "r": 1, "w": 0 },
+      { "chan": "remote", "devpropname": "remote",      "title": "Коммит в репозитории",         "r": 1, "w": 0 },
+      { "chan": "result", "devpropname": "result",      "title": "Результат последнего действия","r": 1, "w": 0 },
+      { "chan": "busy", "devpropname": "busy",        "title": "Выполняется",                  "r": 1, "w": 0 },
+      { "chan": "refresh", "devpropname": "refresh",     "title": "Обновить состояние",           "r": 1, "w": 1 },
+      { "chan": "sync", "devpropname": "sync",        "title": "Отправить в git",              "r": 1, "w": 1 },
+      { "chan": "deploy", "devpropname": "deploy",      "title": "Получить из git и развернуть", "r": 1, "w": 1 },
+      { "chan": "rollback", "devpropname": "rollback",    "title": "Откат к последнему снимку",    "r": 1, "w": 1 },
+      { "chan": "backup", "devpropname": "backup", "title": "Создать резервную копию", "r": 1, "w": 1 }
     ]
   }
 }

@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Ссылки на глобальные переменные intraHouse и заглушки"
+regexes = ['''globals\.[A-Za-z_][A-Za-z0-9_]*''', '''\$\{[A-Z0-9_]+(:num)?\}''']
