@@ -209,6 +209,17 @@ def tracked_files():
         return res
 
 
+def string_values(obj):
+    if isinstance(obj, str):
+        yield obj
+    elif isinstance(obj, dict):
+        for key, value in obj.items():
+            yield key
+            yield from string_values(value)
+    elif isinstance(obj, list):
+        for value in obj:
+            yield from string_values(value)
+
 def cmd_check():
     env = load_env()
     vals = {k: v for k, v in env.items() if len(v) >= 4 and not k.startswith('IH_')}
@@ -234,17 +245,6 @@ def cmd_check():
                 print("ОШИБКА JSON:", f)
                 bad += 1
                 continue
-
-            def string_values(obj):
-                if isinstance(obj, str):
-                    yield obj
-                elif isinstance(obj, dict):
-                    for key, value in obj.items():
-                        yield key
-                        yield from string_values(value)
-                elif isinstance(obj, list):
-                    for value in obj:
-                        yield from string_values(value)
 
             values = [
                 value
@@ -290,7 +290,15 @@ def check_staged():
             if not attr.rstrip().endswith(b': ihsecrets') or required.strip() != b'true':
                 die('не настроен обязательный фильтр для ' + path)
             validate(blob.decode('utf8'), path)
-        if any(value in blob for value in values):
+        if path.endswith('.db'):
+            try:
+                records = (json.loads(line) for line in blob.decode('utf8').splitlines() if line.strip())
+                searchable = [value.encode('utf8') for record in records for value in string_values(record)]
+            except (UnicodeError, json.JSONDecodeError):
+                die('невозможно проверить NeDB в индексе: ' + path)
+        else:
+            searchable = [blob]
+        if any(value in text for text in searchable for value in values):
             die('в индексе обнаружен секрет: ' + path)
 
 

@@ -1,7 +1,12 @@
 #!/bin/sh
 set -eu
 umask 077
+if [ "$#" -ne 4 ] && { [ "$#" -ne 5 ] || [ "$1" != deploy ] || [ "$5" != --check ]; }; then
+  echo 'Usage: project.sh deploy|rollback|backup PROJECT REMOTE BRANCH [--check (deploy only)]' >&2
+  exit 2
+fi
 op=$1
+check_only=${5:-}
 project=$2
 remote=$3
 branch=$4
@@ -41,10 +46,8 @@ trap 'exit 1' HUP INT TERM
 . "$state/gitsync/ih.conf"
 : "${IH_STOP:?}" "${IH_START:?}" "${IH_SNAPSHOTS:?}"
 case "$IH_SNAPSHOTS" in /*) ;; *) exit 1 ;; esac
-mkdir -p -- "$IH_SNAPSHOTS"
-backup=$(realpath -- "$IH_SNAPSHOTS")
+backup=$(realpath -m -- "$IH_SNAPSHOTS")
 case "$backup/" in "$PWD/"*) exit 1 ;; esac
-chmod 700 "$backup"
 prefix="$(basename "$PWD")-gitsync-"
 head=$(git rev-parse HEAD)
 [ "$(git symbolic-ref --short HEAD)" = "$branch" ]
@@ -102,7 +105,7 @@ case "$op" in
       [ "$(git check-attr filter -- "$file")" = "$file: filter: ihsecrets" ]
     done
     git merge-base --is-ancestor "$head" "$target"
-    if git cat-file -e "$head:jbase/devparam.db" && ! git cat-file -e "$target:jbase/devparam.db" 2>/dev/null; then
+    if git cat-file -e "$head:jbase/devparam.db" 2>/dev/null && ! git cat-file -e "$target:jbase/devparam.db" 2>/dev/null; then
       preserve_live=1
     fi
     check_deploy_status
@@ -126,6 +129,12 @@ if [ "$op" = deploy ]; then
   [ "$(git config --get filter.ihsecrets.clean)" = "python3 '$ops/ihsecrets.py' clean %f" ]
   [ "$(git config --get filter.ihsecrets.smudge)" = "python3 '$ops/ihsecrets.py' smudge %f" ]
 fi
+if [ "$check_only" = --check ]; then
+  printf '%s\n' 'Предпроверка Deploy пройдена'
+  exit 0
+fi
+mkdir -p -- "$backup"
+chmod 700 "$backup"
 say "Операция $op выполняется"
 stopped=1
 sh -c "$IH_STOP"
