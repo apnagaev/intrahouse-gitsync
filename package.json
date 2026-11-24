@@ -1,6 +1,6 @@
 {
   "name": "gitsync",
-  "version": "5.1.1",
+  "version": "5.2.0",
   "description": "intraHouse 5 plugin: project git sync by button",
   "main": "index.js",
   "dependencies": {}
